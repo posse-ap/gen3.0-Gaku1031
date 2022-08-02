@@ -282,7 +282,9 @@ main {
   height: 100vh;
   top: 0;
   left: 0;
+  overflow: scroll;
 }
+
 
 #pop-up-2:checked + .overlay { /*pop-up-2にチェックが入ったらoverlayにこのcssを適用する*/
   display: block;
@@ -310,7 +312,20 @@ main {
   padding: 50px 0 20px 0;
   width: 900px;
 }
-
+@media (max-width: 800px) {
+  .window {
+    margin-top: 80px;
+    position: relative;
+    flex-flow: column;
+    display: block;
+    width: auto;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
 .text {
   font-size: 18px;
 	margin: 0;
@@ -327,7 +342,7 @@ main {
   width: 30px;
   height: 30px;
   text-align: center;
-  line-height: 25px;
+  line-height: 23px;
 }
 
 .pop__left {
@@ -337,6 +352,14 @@ main {
   height: 100%;
   margin: 0 40px 0 56px;
 }
+@media (max-width: 800px) {
+  .pop__left {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+  }
+}
 
 .pop__right {
   display: flex;
@@ -344,6 +367,14 @@ main {
   width: 48%;
   height: 100%;
   margin-right: 56px;
+}
+@media (max-width: 800px) {
+  .pop__right {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    height: 50%;
+  }
 }
 
 h1 {
@@ -383,7 +414,11 @@ textarea {
   flex-wrap: wrap;
   margin: -10px 0 20px 0;
 }
-
+@media (max-width: 800px) {
+  .contents {
+    width: 80%;
+  }
+}
 .languages {
   display: flex;
   flex-wrap: wrap;
@@ -470,6 +505,14 @@ textarea {
   text-decoration: none;
   font-size: 90%;
   bottom: 30px;
+}
+@media(max-width: 800px) {
+  .window__footer {
+    display: block;
+    position: relative;
+    width: 80%;
+    bottom: 0;
+  }
 }
 
 .awesome {

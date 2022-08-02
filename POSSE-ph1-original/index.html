@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-  <script src="./js/mychart1.js"></script>
+  <script src="./js/Chart.min.js" defer></script>
+  <script src="./js/mychart1.js" defer></script>
+  <script src="./js/myChart2.js" defer></script>
+  <script src="./js/myChart3.js" defer></script>
   <title>ph1-original</title>
 </head>
 <body>
   <header class="p-header">
-    <div class="p-header__logo"><img src="./img/logo.svg" alt="POSSE"></div>
+    <div class="p-header__logo">
+      <img src="./img/logo.svg" alt="POSSE">
+    </div>
     <nav class="p-header__nav">
         <label for="pop-up-1" class="p-header__nav__record">記録・投稿</label>
         <input type="checkbox" id="pop-up-1">
@@ -100,17 +105,17 @@
     <div class="p-body-left">
       <div class="p-body-hour-flex">
         <div class="p-body-hour">
-          <h1 class="hour-title">Today</h1>
+          <p class="hour-title">Today</p>
           <span class="hour-number">0</span>
           <span class="hour-text">hour</span>
         </div>
         <div class="p-body-hour">
-          <h1 class="hour-title">Month</h1>
+          <p class="hour-title">Month</p>
           <span class="hour-number">17</span>
           <span class="hour-text">hour</span>
         </div>
         <div class="p-body-hour">
-          <h1 class="hour-title">Total</h1>
+          <p class="hour-title">Total</p>
           <span class="hour-number">19</span>
           <span class="hour-text">hour</span>
         </div>
@@ -120,8 +125,6 @@
         <canvas id="myChart1">
 
         </canvas>
-        <script src="./js/Chart.min.js"></script>
-        <script src="./js/myChart1.js"></script>
       </div>
     </div>
     <div class="p-body-right">
@@ -130,15 +133,13 @@
           <canvas id="myChart2">
 
           </canvas>
-          <script src="./js/Chart.min.js"></script>
-          <script src="./js/myChart2.js"></script>
         </div>
       </div>
       <div class="circle-right">
         <div class="myChart3">
           <canvas id="myChart3">
+            
           </canvas>
-          <script src="./js/myChart3.js"></script>
         </div>
       </div>
     </div>
