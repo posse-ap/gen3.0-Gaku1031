@@ -5,7 +5,7 @@
   var data3 = {
     labels: ['ドットインストール', 'N予備校', 'POSSE課題'],
     datasets: [{
-      data: [94.1, 0, 5.9],
+      data: [20, 40, 40],
       backgroundColor: ['#0042e5', '0070B9', '#01BDDB'],
       borderWidth: 0
     }]
@@ -19,10 +19,14 @@
     type: type3,
     data: data3,
     options: {
+      legend :{
+        position: 'bottom'
+      },
       maintainAspectRatio: false,
       title: {
         display: true,
-        text: '学習コンテンツ'
+        text: '学習コンテンツ',
+        fontSize: 18
       },
       plugins: {
         labels: {

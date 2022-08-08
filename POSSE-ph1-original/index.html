@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <script src="./js/Chart.min.js" defer></script>
+  <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js" defer></script>
+  <script src="./js/chartjs-plugin-labels.js" defer></script>
   <script src="./js/mychart1.js" defer></script>
   <script src="./js/myChart2.js" defer></script>
   <script src="./js/myChart3.js" defer></script>
@@ -22,7 +24,7 @@
         <label for="pop-up-1" class="p-header__nav__record">記録・投稿</label>
         <input type="checkbox" id="pop-up-1">
         <div class="overlay">
-            <div class="window">
+            <div class="window-1">
               <label for="pop-up-1" class="close">×</label>
               <div class="pop__left">
                   <p id="study-day">学習日<br>
@@ -85,7 +87,7 @@
               <label for="pop-up-2" class="window__footer">記録・投稿</label>
               <input type="checkbox" id="pop-up-2">
               <div class="overlay">
-                <div class="window">
+                <div class="window-2">
                   <label for="pop-up-2" class="close">×</label>
                   <div class="completion">
                     <span class="awesome">AWESOME!</span>
@@ -95,7 +97,7 @@
 
                 </div>
               </div>
-            </div>
+          </div>
         </div>
     </nav>
 </header>
@@ -121,33 +123,33 @@
         </div>
       </div>
       <hr class="boundary">
-      <div class="myChart1">
-        <canvas id="myChart1">
-
-        </canvas>
+      <div class="myChart1" id="myChart1" style="min-height: initial">
+        <!-- <canvas id="">
+          Canvas not supported...
+        </canvas> -->
       </div>
     </div>
     <div class="p-body-right">
       <div class="circle-left">
         <div class="myChart2">
           <canvas id="myChart2">
-
+            Canvas not supported...
           </canvas>
         </div>
       </div>
       <div class="circle-right">
         <div class="myChart3">
           <canvas id="myChart3">
-            
+            Canvas not supported...
           </canvas>
         </div>
       </div>
     </div>
   </div>
   <div class="date">
-    <input type="submit" class="back" name="calender[2020-09]" value="<">
+    <input type="submit" class="back" name="calender[2020-09]" value="&lang;">
     2020年 10月
-    <input type="submit" class="next" name="calender[2020-11]" value=">">
+    <input type="submit" class="next" name="calender[2020-11]" value="&rang;">
   </div>
   <label for="pop-up-1" class="p-footer__nav__record">記録・投稿</label>
   <input type="checkbox" id="pop-up-1">
