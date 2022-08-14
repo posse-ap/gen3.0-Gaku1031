@@ -13,6 +13,9 @@
   <script src="./js/mychart1.js" defer></script>
   <script src="./js/myChart2.js" defer></script>
   <script src="./js/myChart3.js" defer></script>
+  <script src="./js/window.js" defer></script>
+  <script src="./js/calender.js" defer></script>
+  <script src="./js/load.js" defer></script>
   <title>ph1-original</title>
 </head>
 <body>
@@ -24,12 +27,41 @@
         <label for="pop-up-1" class="p-header__nav__record">記録・投稿</label>
         <input type="checkbox" id="pop-up-1">
         <div class="overlay">
-            <div class="window-1">
+          <div class="window-1">
               <label for="pop-up-1" class="close">×</label>
               <div class="pop__left">
                   <p id="study-day">学習日<br>
-                    <input type="text" id="day" name="day">
+                      <input type="button" id="day" name="day" onclick="showCalender();">
                   </p>
+                  <div class="overlay" id="overlay">
+                    <div class="window-3" id="window-3">
+                      <input type="button" class="back" id="back" onclick="back();" /><label for="back" class="arrow">
+                        <i class="fa fa-arrow-left"></i>
+                      </label>
+                      <table>
+                          <thead>
+                            <tr id="date">
+                              <th id="prev">&lang;</th>
+                              <th id="title" colspan="3">2020年10月</th>
+                              <th id="next">&rang;</th>
+                            </tr>
+                            <tr id="day-of-week">
+                              <th>Sun</th>
+                              <th>Mon</th>
+                              <th>Tue</th>
+                              <th>Wed</th>
+                              <th>Thu</th>
+                              <th>Fri</th>
+                              <th>Sat</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                        <label for="determine" class="determination" colspan="7">決定</label>
+                          <input type="button" id="determine" onclick="determine();">
+                    </div>
+                  </div>
                   <h1>学習コンテンツ（複数選択可)</h1><br>
                   <div class="contents">
                     <label class="label">
@@ -85,10 +117,13 @@
                 </label>
               </div>
               <label for="pop-up-2" class="window__footer">記録・投稿</label>
-              <input type="checkbox" id="pop-up-2">
+              <input type="checkbox" id="pop-up-2" onclick="showLoad();">
               <div class="overlay">
                 <div class="window-2">
                   <label for="pop-up-2" class="close">×</label>
+                  <div class="loader-wrap" id="loading">
+                    <div class="loader" id="loader"></div>
+                  </div>
                   <div class="completion">
                     <span class="awesome">AWESOME!</span>
                     <div class="checkmark"></div>
@@ -124,24 +159,15 @@
       </div>
       <hr class="boundary">
       <div class="myChart1" id="myChart1" style="min-height: initial">
-        <!-- <canvas id="">
-          Canvas not supported...
-        </canvas> -->
       </div>
     </div>
     <div class="p-body-right">
       <div class="circle-left">
-        <div class="myChart2">
-          <canvas id="myChart2">
-            Canvas not supported...
-          </canvas>
+        <div  id="myChart2" class="myChart2">
         </div>
       </div>
       <div class="circle-right">
-        <div class="myChart3">
-          <canvas id="myChart3">
-            Canvas not supported...
-          </canvas>
+        <div id="myChart3" class="myChart3">
         </div>
       </div>
     </div>
