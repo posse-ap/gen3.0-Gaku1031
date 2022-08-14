@@ -14,6 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
     rel="stylesheet">
+    <script src="./assets/scripts/btn.js" defer></script>
 </head>
 
 <body>
@@ -43,6 +44,47 @@
         </a>
       </li>
     </ul>
+    <div class="openbtn2" id="btn">
+      <span></span><span></span>
+    </div>
+      <div class="window" id="window">
+        <header class="l-header p-header-2">
+          <div class="p-header__logo"><img src="./assets/img/logo.svg" alt="POSSE"></div>
+        </header>
+        <main>
+          <p class="menu-contents">POSSEとは<br>クイズ</p>
+          <div class="p-fixedLine-2">
+            <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer"
+              class="p-fixedLine__link-2">
+              <i class="u-icon__line-2"></i>
+              <p class="p-fixedLine__link__text-2">POSSE公式LINE追加</p>
+              <i class="u-icon__link-2"></i>
+            </a>
+          </div>
+          <div class="l-footer__inner-2">
+            <div class="p-footer__siteinfo-2">
+              <a href="https://posse-ap.com/" target="_blank" rel="noopener noreferrer"
+                class="p-footer__siteinfo__link-2">POSSE公式サイト</a><i class="u-icon__link-2"></i>
+            </div>
+            <div class="p-footer__sns-2">
+              <ul class="p-sns__list p-footer__sns__list-2">
+                <li class="p-sns__item-2">
+                  <a href="https://twitter.com/posse_program" target="_blank" rel="noopener noreferrer"
+                    class="p-sns__item__link-2" aria-label="Twitter">
+                    <i class="u-icon__twitter-2"></i>
+                  </a>
+                </li>
+                <li class="p-sns__item-2">
+                  <a href="https://www.instagram.com/posse_programming/" target="_blank" rel="noopener noreferrer"
+                    class="p-sns__item__link-2" aria-label="instagram">
+                    <i class="u-icon__instagram-2"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
   </header>
   <!-- /.l-header .p-header -->
 
@@ -69,7 +111,7 @@
           </h2>
           <div class="p-top-about__body">
             <picture class="p-top-about__image">
-              <img src="./assets/img/img-about.jpg" alt="POSSEメンバー集合写真">
+              <img id="p-top-about__image" src="./assets/img/img-about.jpg" alt="POSSEメンバー集合写真">
             </picture>
             <div class="p-top-about__content">
               <p>
@@ -117,7 +159,7 @@
           <img src="./assets/img/logo.svg" alt="POSSE">
         </span>
         <a href="https://posse-ap.com/" target="_blank" rel="noopener noreferrer"
-          class="p-footer__siteinfo__link">POSSE公式サイト</a>
+          class="p-footer__siteinfo__link">POSSE公式サイト</a><i class="u-icon__link"></i>
       </div>
       <div class="p-footer__sns">
         <ul class="p-sns__list p-footer__sns__list">
