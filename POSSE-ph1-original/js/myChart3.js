@@ -1,40 +1,77 @@
-(function () {
-  'use strict';
+var options = {
+  stroke: {
+      width: 0
+  },
 
-  var type3 = 'doughnut';
-  var data3 = {
-    labels: ['ドットインストール', 'N予備校', 'POSSE課題'],
-    datasets: [{
-      data: [20, 40, 40],
-      backgroundColor: ['#0042e5', '0070B9', '#01BDDB'],
-      borderWidth: 0
-    }]
-  };
-  var options = {
-    cutoutPercentage: 40
-  };
-
-  var ctx3 = document.getElementById('myChart3').getContext('2d');
-  var myChart3 = new Chart(ctx3, {
-    type: type3,
-    data: data3,
-    options: {
-      legend :{
-        position: 'bottom'
-      },
-      maintainAspectRatio: false,
-      title: {
-        display: true,
-        text: '学習コンテンツ',
-        fontSize: 18
-      },
-      plugins: {
-        labels: {
-          render: 'percentage',
-          fontColor: 'white',
-          fontSize: 20
-        }
-      }
+  dataLabels: {
+    enabled: true,
+    style: {
+      fontSize: "10px",
     }
-  });
-})();
+  },
+
+  title: {
+    text: '学習コンテンツ',
+    align: 'left',
+    margin: 10,
+    style: {
+      fontSize:  '18px',
+      color:  '#263238'
+    },
+  },
+
+  series: [20, 40, 40],
+  plotOptions: {
+    pie: {
+      offsetY: 20,
+      donut: {
+        size: '50px',
+      }
+    },
+  },
+  chart: {
+    height: 600,
+    offsetY: 20,
+  animations: {
+      enabled: false
+  },
+  type: 'donut',
+  },
+  labels: ['ドットインストール', 'N予備校', 'POSSE課題'],
+
+  colors: ['#0042e5', '#0070B9', '#01BDDB'],
+
+  legend: {
+      position: 'bottom',
+      horizontalAlign: 'left', 
+      fontSize: '15px',
+  },
+
+  responsive: [{
+      breakpoint: 800,
+      options: {
+        plotOptions: {
+          pie: {
+          offsetY: 0
+          }
+        },
+        title: {
+          style: {
+            fontSize:  '13px',
+            color:  '#263238'
+          }
+        },
+      chart: {
+        height: 300,
+        fontSize: 20
+      },
+      legend: {
+          position: 'bottom',
+          fontSize: '5px',
+      }
+      }
+  }]
+  };
+
+  var chart = new ApexCharts(document.querySelector("#myChart3"), options);
+  chart.render();

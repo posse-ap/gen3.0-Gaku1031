@@ -1,53 +1,76 @@
-(function () {
-  'use strict';
+var options = {
+  stroke: {
+      width: 0
+  },
 
-  var type = 'doughnut';
-  var data = {
-    labels: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'SQL', 'SHELL','情報システム基礎知識(その他)'],
-    datasets: [{
-      data: [30, 20, 10, 5, 5, 20, 20, 10],
-      backgroundColor: ['#0042e5', '#0070B9', '#01BDDB', '#02CDFA', '#B29DEE', '#6C43E5', '#460AE8', '#2C00B9'],
-      borderWidth: 0
-    }]
-  };
-  var options = {
-    cutoutPercentage: 40
-  };
-
-  var ctx = document.getElementById('myChart2').getContext('2d');
-  var myChart2 = new Chart(ctx, {
-    type: type,
-    data: data,
-    options: {
-      legend: {
-        position: 'bottom'
-      },
-      maintainAspectRatio: false,
-      title: {
-        display: true,
-        text: '学習言語',
-        fontSize: 18,
-      },
-      plugins: {
-        labels: {
-          render: 'percentage',
-          fontColor: 'white',
-          precision: 2,
-          fontSize: 10
-        }
-      }
-        // datalabels: {
-        //   display: true,
-        //   font: {
-        //     size: 15
-        //   }
-        // },
-      //   labels: {
-      //     render: 'percentage',
-      //     fontColor: 'black',
-      //     fontSize: 20
-      //   }
-      // }
+  dataLabels: {
+    enabled: true,
+    style: {
+      fontSize: '10px',
     }
-  });
-})();
+  },
+
+  title: {
+    text: '学習言語',
+    align: 'left',
+    margin: 10,
+    style: {
+      fontSize:  '18px',
+      color:  '#263238'
+    },
+  },
+
+  series: [30, 20, 10, 5, 5, 20, 20, 10],
+  plotOptions: {
+    pie: {
+      offsetY: 20,
+      donut: {
+        size: '50px',
+      }
+    },
+  },
+  chart: {
+    height: 600,
+    offsetY: 20,
+  animations: {
+      enabled: false
+  },
+  type: 'donut',
+  },
+  labels: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'SQL', 'SHELL','情報システム基礎知識(その他)'],
+
+  colors: ['#0042e5', '#0070B9', '#01BDDB', '#02CDFA', '#B29DEE', '#6C43E5', '#460AE8', '#2C00B9'],
+
+  legend: {
+      position: 'bottom',
+      horizontalAlign: 'left', 
+      fontSize: '15px'
+  },
+
+  responsive: [{
+      breakpoint: 800,
+      options: {
+        plotOptions: {
+          pie: {
+          offsetY: 0,
+          }
+        },
+        title: {
+          style: {
+            fontSize:  '13px',
+            color:  '#263238'
+          }
+        },
+      chart: {
+        fontSize: 5,
+      },
+      legend: {
+          position: 'bottom',
+          fontSize: '5px',
+      }
+      }
+  }]
+  };
+
+  var chart = new ApexCharts(document.querySelector("#myChart2"), options);
+  chart.render();

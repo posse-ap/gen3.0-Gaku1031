@@ -8,6 +8,11 @@ body {
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
 }
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 
 .p-header {
   position: fixed;
@@ -34,9 +39,6 @@ body {
 @media (max-width: 800px) {
   .p-header__nav__record {
     display: none;
-    /* position: relative;
-    margin: 0 20px;
-    bottom: 20px; */
   }
 }
 
@@ -98,7 +100,7 @@ main {
   .p-body-right {
     display: flex;
     width: auto;
-    margin: 16px 20px;
+    margin: 16px 20px -55px 20px;
     gap: 16px;
   }
 }
@@ -211,9 +213,8 @@ main {
 @media (max-width: 800px) {
   .myChart2 {
     position: absolute;
-    /* box-sizing: border-box; */
     width: 100%;
-    height: 50%;
+    height: 80%;
   }
 }
 .myChart3 {
@@ -231,11 +232,10 @@ main {
 @media (max-width: 800px) {
   .myChart3 {
     position: absolute;
-    /* box-sizing: border-box; */
     margin-left: -2px;
     width: 100%;
     left: 0;
-    height: 50%;
+    height: 80%;
   }
 }
 
@@ -246,7 +246,6 @@ main {
   .circle-left {
     position: relative;
     width: 50%;
-    /* padding: 0 8px 0 0; */
     box-sizing: border-box;
   }
 }
@@ -258,7 +257,6 @@ main {
   .circle-right {
     position: relative;
     width: 50%;
-    /* padding: 16px 20px 0 8px; */
     box-sizing: border-box;
   }
 }
@@ -273,6 +271,10 @@ main {
 
 #pop-up-2 {
   display: none; 
+}
+
+#pop-up-3 {
+  display: none;
 }
 
 .overlay {
@@ -320,20 +322,37 @@ main {
 }
 @media (max-width: 800px) {
   .window-1 {
-    margin-top: 80px;
+    margin-top: 120px;
     position: relative;
     flex-flow: column;
     display: block;
     width: auto;
-    height: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+    height: 120vh;
+    border-radius: 20px;
+    padding: 20px 10px;
+    overflow: hidden;
   }
 }
+.window-3 {
+  position: relative;
+	max-width: 1028px;
+	height: 500px;
+	background-color: #ffffff;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  padding: 50px 0 20px 0;
+  width: 900px;
+  z-index: 1;
+}
+
 @media (max-width: 800px) {
-  .window-2 {
+  .window-2, .window-3 {
     position: absolute;
     display: block;
     width: 100%;
@@ -342,6 +361,7 @@ main {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+    overflow: hidden;
   }
 }
 
@@ -545,7 +565,7 @@ textarea {
   box-shadow: 0 5px 5px 0 #65dffa;
   text-decoration: none;
   font-size: 90%;
-  bottom: 130px;
+  bottom: 30px;
 }
 @media(max-width: 800px) {
   .window__footer {
@@ -554,6 +574,182 @@ textarea {
     width: 80%;
     left: 50%;
     transform: translate(-50%, 0);
+  }
+}
+
+#day-of-week {
+  color: #97B9D1;
+}
+
+table {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td {
+  width: 40px;
+  height: 40px;
+}
+
+td.disabled {
+  opacity: 0;
+}
+
+td.before {
+  color: silver;
+}
+
+td.today {
+  color: white;
+  background-color: #0F70BE;
+  border-radius: 50%;
+}
+
+#date {
+  margin: 0 auto;
+  position: relative;
+  left: 13%;
+}
+
+#prev, #next, .today {
+  cursor: pointer;
+  user-select: none;
+}
+
+#prev {
+  left: 10%;
+  color: #0f71bc;
+  margin: 0 20px;
+  font-size: 150%;
+}
+
+#next {
+  color: #97b9d1;
+  margin: 0 20px;
+  font-size: 150%;
+}
+.determination {
+  text-align: center;
+  line-height: 25px;
+  height: 45px;
+  color: #fff;
+  border-radius: 100vh;
+  background: linear-gradient(to right, #0074BB 0%, #02CDFB 100%);
+  padding: 10px 50px; 
+  box-shadow: 0 5px 5px 0 #65dffa;
+  text-decoration: none;
+  font-size: 120%;
+  display: block;
+  margin: 10px auto;
+  width: 20%;
+}
+@media (max-width: 800px) {
+  .determination {
+    width: 40%;
+    font-size: 100%;
+  }
+}
+
+#determine {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 20px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #f5f5f8;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 23px;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+}
+
+.loader-wrap {
+	position: fixed;
+	display: flex;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(to right, #0074BB 0%, #02CDFB 100%);
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -614,13 +810,6 @@ textarea {
   font-weight: bold;
   font-size: small;
 }
-@media (max-width: 800px) {
-  .date {
-    font-weight: 2px;
-    position: relative;
-    bottom: 280px;
-  }
-}
 
 .back {
   color: #0f71bc;
@@ -640,12 +829,10 @@ textarea {
 @media (max-width: 800px) {
   .p-footer__nav__record {
     display: block;
-    position: relative;
-    bottom: 260px;
-    margin: 0 20px;
+    margin: 20px;
     text-align: center;
-    line-height: 40px;
-    height: 60px;
+    line-height: 25px;
+    height: 45px;
     color: #fff;
     border-radius: 100vh;
     background: linear-gradient(to right, #0074BB 0%, #02CDFB 100%);

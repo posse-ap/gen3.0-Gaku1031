@@ -18,7 +18,7 @@ var options = {
         bar: {
             horizontal: false,
             borderRadius: 10,
-            columnWidth: '60%',
+            columnWidth: '50%',
         },
     },
     dataLabels: {
@@ -42,7 +42,7 @@ var options = {
                 }
             },
             style: {
-                colors: '#ccc'
+                colors: '#ccc',
             },               
         },
     },
@@ -89,6 +89,15 @@ var options = {
         {
         breakpoint: 800,
         options: {
+            xaxis: {
+                labels: {
+                    offsetY: -7,
+                    style: {
+                        colors: '#ccc',
+                        fontSize: '8px',
+                    }
+                }
+            },
             chart: {
                 height: 200
             }
