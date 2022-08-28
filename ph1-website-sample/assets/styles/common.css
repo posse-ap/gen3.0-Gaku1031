@@ -880,6 +880,11 @@ small {
   line-height: 1.5;
   margin-top: 24px;
 }
+@media (max-width: 960px) {
+  .p-quiz-box__question__title__text {
+    font-size: 14px;
+  }
+}
 
 .p-quiz-box__question__image {
   margin: 64px auto 0;

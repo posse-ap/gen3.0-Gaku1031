@@ -11,14 +11,3 @@ if (trigger) {
     window.classList.toggle('panelactive');
   }, false);
 }
-
-
-// document.getElementById('window').style.display = 'none';
-
-// function open() {
-//   const window = document.getElementById('window');
-
-//   if (window.style.display == 'none') {
-//     window.style.display = 'block';
-//   }
-// }
