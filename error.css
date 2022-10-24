@@ -1,0 +1,35 @@
+.error {
+  color: #F3BD66;
+}
+
+.access__error {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+	justify-content: center;
+	align-items: center;
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.exclamation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
+  border-radius: 50%;
+  background-color: #F3BD66;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.error__text {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.5;
+}
