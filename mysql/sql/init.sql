@@ -27,7 +27,6 @@ ALTER TABLE post ADD CONSTRAINT FK_user_post FOREIGN KEY (userid) REFERENCES use
 INSERT INTO post set total_hour=3.0,  study_date='2022-09-14', userid=1, study_lang="HTML", study_content="ドットインストール";
 
 DROP TABLE IF EXISTS languages;
---created_atなどは妥協する
 CREATE TABLE IF NOT EXISTS languages (
   id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   -- post_id INT NOT NULL,
