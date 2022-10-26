@@ -1,4 +1,4 @@
-let options = {
+let options3 = {
   stroke: {
       width: 0
   },
@@ -71,7 +71,7 @@ let options = {
       }
       }
   }]
-  };
+};
 
-  let chart = new ApexCharts(document.querySelector("#myChart3"), options);
-  chart.render();
+  let chart3 = new ApexCharts(document.querySelector("#myChart3"), options3);
+  chart3.render();
