@@ -40,8 +40,9 @@ function determine() {
   
 }
 
-const setYear = currentDate.getFullYear();
-const setMonth = currentDate.getMonth()+1;
+//今月の年月を取得して画面下部に表示する
+// const setYear = currentDate.getFullYear();
+// const setMonth = currentDate.getMonth()+1;
 
-let thisYM = document.getElementById('this-ym');
-thisYM.innerHTML = `${setYear}年${setMonth}月`;
+// let thisYM = document.getElementById('this-ym');
+// thisYM.innerHTML = `${setYear}年${setMonth}月`;
