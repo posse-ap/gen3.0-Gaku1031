@@ -27,6 +27,16 @@ body {
   z-index: 3;
 }
 
+.p-header__logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.subtitle {
+  color: #BDCFDE;
+}
+
 .p-header__nav__record {
   color: #fff;
   border-radius: 100vh;
@@ -809,9 +819,15 @@ td.today {
 }
 
 .date {
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-weight: bold;
   font-size: small;
+}
+
+#this-ym {
+  margin: auto 0;
 }
 
 .back {

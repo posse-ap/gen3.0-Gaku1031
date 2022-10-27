@@ -39,3 +39,9 @@ function determine() {
   setDate.value = setYear + '/' + setMonth + '/' + date;
   
 }
+
+const setYear = currentDate.getFullYear();
+const setMonth = currentDate.getMonth()+1;
+
+let thisYM = document.getElementById('this-ym');
+thisYM.innerHTML = `${setYear}年${setMonth}月`;
