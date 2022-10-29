@@ -71,6 +71,7 @@ INSERT INTO contents SET content='POSSE課題', hour=1.0, created_at='2022-10-13
 
 INSERT INTO contents SET content='N予備校', hour=1.0, created_at='2022-10-13', updated_at='2022-10-13';
 
+
 -- SELECT sum(hour) FROM contents where post_id=1;
 select sum(hour) from contents where curdate() = date(created_at);
 
