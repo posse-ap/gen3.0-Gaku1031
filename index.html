@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
   <script src="./js/Chart.min.js" defer></script>
   <script src="https://unpkg.com/apexcharts/dist/apexcharts.min.js" defer></script>
   <script src="./js/chartjs-plugin-labels.js" defer></script>
@@ -31,12 +33,13 @@
           <div class="window-1">
               <label for="pop-up-1" class="close" id="close1">×</label>
               <div class="pop__left">
-                  <form id="study-day" action="">
-                    学習日
-                      <input type="text" name="day" onclick="showCalender();" 
-                          onChange="cal1.getFormValue(); cal1.hide();" id="day"><br>
-                      <div id="calid"></div>
-                  </form>
+                  <!-- <form id="study-day" action=""> -->
+                    <label>学習日</label>
+                      <!-- <input type="text" name="day" onclick="showCalender();" 
+                          onChange="cal1.getFormValue(); cal1.hide();" id="day"><br> -->
+                          <input type="text" name="datepicker" id="sample" class="day">
+                      <!-- <div id="calid"></div> -->
+                  <!-- </form> -->
                   <div class="overlay" id="overlay">
                     <div class="window-3" id="window-3">
                       <input type="button" class="back" id="back" onclick="back();" /><label for="back" class="arrow">
