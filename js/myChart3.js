@@ -21,6 +21,7 @@ let options3 = {
   },
 
   series: [20, 40, 40],
+  
   plotOptions: {
     pie: {
       offsetY: 20,
